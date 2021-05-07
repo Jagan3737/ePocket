@@ -1,0 +1,40 @@
+<%- include("partials/header"); -%>
+
+<div class="container">
+  <div class="row" style="overflow-x:auto;">
+    <div class="col-lg-12">
+      <h2>Transaction History</h2>
+      <br>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Sender</th>
+            <th scope="col">Receiver</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Date and Time</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% transactionDetails.forEach(function(elements){ %>
+          <tr>
+            <td><%= elements.sender %></td>
+            <td><%= elements.receiver %></td>
+            <td>₹ <%= elements.amount %></td>
+            <td><%= elements.date %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      <br>
+
+      <form action="/customers" method="get">
+        <button type="submit" class="btn btn-primary btn-lg">Go Back</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<%- include("partials/footer"); -%>

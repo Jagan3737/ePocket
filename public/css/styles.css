@@ -1,0 +1,132 @@
+/* body {
+  background-color: #ffe8e8;
+} */
+/* header.ejs */
+.container-fluid {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.875rem;
+}
+
+.navbarColor {
+  background-color: #ff9292;
+}
+
+.navbar-brand {
+  font-family: 'Zen Dots', cursive;
+  font-size: 1.875rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  color: white;
+  float: left;
+}
+
+.navContents {
+  padding-right: 3.125rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+.nav-item {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: white;
+}
+
+.brandImage {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-right: 0.938rem;
+}
+
+/* home.ejs */
+.container {
+  padding-top: 2.5rem;
+}
+
+.startButton {
+  margin-top: 1.875rem;
+}
+
+/* customers.ejs */
+.containerCustomers {
+  padding: 6.25rem;
+  padding-top: 3.125rem;
+}
+
+table, tr, th {
+  border: 0.063rem solid black;
+}
+
+/* customers.ejs */
+.form-control {
+  width: 20rem;
+}
+
+.form-select {
+  width: 20rem;
+}
+
+.fieldNames {
+  font-weight: bold;
+}
+
+/* footer.ejs */
+footer {
+  background-color: #fcd1d1;
+  clear: both;
+  position: relative;
+  height: 200px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.footer-fab-icon {
+  padding: 30px 10px;
+}
+
+.favIcon {
+  font-size: 30px;
+  color: black;
+  padding: 0 10px;
+}
+
+.favIcon:hover {
+  color: #ff2e63;
+}
+
+.paymentSuccessful {
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: auto;
+}
+
+.pageColor {
+  background-color: white;
+}
+
+.homeContainer {
+  padding-bottom: 50px;
+}
+
+.homePic {
+  display: block;
+  margin: auto;
+  width: 90%;
+  height: auto;
+}
+
+.headingFont{
+  padding-top: 2rem;
+}
+
+.leftContainer{
+  padding-top: 2rem;
+}

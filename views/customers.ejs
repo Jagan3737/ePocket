@@ -1,0 +1,41 @@
+<%- include("partials/header"); -%>
+
+<div class="container">
+  <div class="row" style="overflow-x:auto;">
+    <div class="col-lg-12">
+      <h2>Customers</h2>
+      <br>
+
+      <table class="table table-bordered ">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">User_ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Balance</th>
+            <th scope="col">View</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% customerDetails.forEach(function(elements){ %>
+          <tr>
+            <td><%= elements._id%></td>
+            <td><%= elements.userID %></td>
+            <td><%= elements.name %></td>
+            <td>₹ <%= elements.balance %></td>
+            <td>
+              <form action="/customers/<%=elements.name%>" method="get">
+                <button type="submit" class="btn btn-primary ">View</button>
+              </form>
+            </td>
+          </tr>
+          <% }); %>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,28 @@
+<%- include("partials/header"); -%>
+
+<div class="container">
+  <h2>Customer Details</h2>
+  <br>
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label fieldNames">Name:</label>
+    <div class="col-lg-10 ">
+      <input class="form-control" type="text" value="<%= name %>" readonly>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label  class="col-sm-2 col-form-label fieldNames">User_ID:</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" value="<%= userID %>" readonly>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label fieldNames">Balance:</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" value="₹ <%= balance %>" readonly>
+    </div>
+  </div>
+  <br>
+  <a href="/transfer/<%=name%>" class="btn btn-primary transferButton btn-lg">Send Money</a>
+</div>
+
+<%- include("partials/footer"); -%>

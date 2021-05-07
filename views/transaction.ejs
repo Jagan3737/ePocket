@@ -1,0 +1,49 @@
+<%- include("partials/header"); %>
+
+<div class="container">
+  <form action="/processing" method="post">
+
+    <h2>Sender</h2>
+    <br>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label fieldNames">Name:</label>
+      <div class="col-sm-10">
+        <input class="form-control" type="text" name="sender" value="<%= name %>" readonly>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label fieldNames">Balance:</label>
+      <div class="col-sm-10">
+        <input class="form-control" type="text" value="₹ <%= balance %>" readonly>
+      </div>
+    </div>
+    <br>
+
+    <h2>Receiver</h2>
+    <br>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label fieldNames">Name:</label>
+      <div class="col-sm-10">
+        <select name="receiver" class="form-select" aria-label="Default select example">
+          <% customerDetails.forEach(function(elements){ %>
+          <% if( elements.name === name ){ %>
+          <% }else{ %>
+          <option><%=elements.name%></option>
+          <% } %>
+          <% }); %>
+        </select>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label fieldNames">Amount:</label>
+      <div class="col-sm-10">
+        <input name="amount" class="form-select" type="number" id="replyNumber" min="1" max="100000" data-bind="value:replyNumber" required />
+      </div>
+    </div>
+    <br>
+
+    <button id="mybutton" type="submit" class="btn btn-primary btn-lg">Transfer Money</button>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>
